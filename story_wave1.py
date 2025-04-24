@@ -500,9 +500,6 @@ def start_wave_1(screen):
 
     running = True
     game_over = False
-    controls_rendered = pygame.font.SysFont("Arial", 16).render(
-        "Controls: A/D - Move, W - Jump, S - Crouch, SPACE - Punch, E - Shield, SPACE+A+S - Shield Break", True,
-        (255, 255, 255))
 
     while running:
         for event in pygame.event.get():
@@ -567,7 +564,6 @@ def start_wave_1(screen):
         archon.draw(screen)
         archon.draw_top_health(screen)
 
-        screen.blit(controls_rendered, (10, 10))
 
         if nyborg.shield_broken or archon.shield_broken:
             break_font = pygame.font.SysFont("Arial", 16)
